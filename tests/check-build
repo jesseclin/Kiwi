@@ -84,7 +84,7 @@ source .venv/test-wheel/bin/activate
 pip install --upgrade setuptools pip
 pip install -r requirements/tarballs.txt
 pip install pycparser
-pip install --only-binary :all: -f dist/ kiwitcms
+pip install -f dist/ kiwitcms
 pip freeze | grep kiwitcms
 deactivate
 rm -rf .venv/

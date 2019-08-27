@@ -3,7 +3,8 @@ FROM centos:centos7
 RUN rpm -Uhv https://dl.fedoraproject.org/pub/epel/7/x86_64/Packages/e/epel-release-7-11.noarch.rpm && \
     yum -y --setopt=tsflags=nodocs install centos-release-scl && \
     yum -y --setopt=tsflags=nodocs install rh-python36 gcc mariadb-devel \
-    postgresql-devel httpd-devel gettext npm which unzip libffi-devel && \
+    postgresql-devel httpd-devel gettext npm which unzip libffi-devel openldap-devel python-devel && \
+     yum -y --setopt=tsflags=nodocs groupinstall "Development tools" && \
     yum clean all
 
 
